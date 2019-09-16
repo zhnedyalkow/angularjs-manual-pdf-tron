@@ -1,0 +1,19 @@
+{
+  "name": "angularjs-manual-pdf-tron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhnedyalkow/angularjs-manual-pdf-tron.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhnedyalkow/angularjs-manual-pdf-tron/issues"
+  },
+  "homepage": "https://github.com/zhnedyalkow/angularjs-manual-pdf-tron#readme"
+}
