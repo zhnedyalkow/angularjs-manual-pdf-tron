@@ -9,7 +9,7 @@
 </head>
 
 <!-- Import WebViewer as a script tag -->
-<script src='WebViewer/lib/webviewer.min.js'></script>
+<script src='./WebViewer/lib/webviewer.min.js'></script>
 
 <body>
     <div id='viewer' style='width: 1920px; height: 880px; margin: 0 auto;'></div>
@@ -18,7 +18,27 @@
     <!-- https://www.pdftron.com/documentation/web/get-started/manually -->
     <!-- https://www.pdftron.com/documentation/web/get-started/angular/exist-proj -->
 
-    <script src="./scripts/viewer.js"></script>
+    <script>
+        WebViewer({
+          path: 'WebViewer/lib', // path to the PDFTron 'lib' folder on your server
+          licenseKey: 'Insert commercial license key here after purchase',
+        //   initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf',
+          initialDoc: '/books/0.pdf',  // You can also use documents on your server
+        }, document.getElementById('viewer'))
+        .then(function(instance) {
+          var docViewer = instance.docViewer;
+          var annotManager = instance.annotManager;
+          // call methods from instance, docViewer and annotManager as needed
+        
+          // you can also access major namespaces from the instance as follows:
+          // var Tools = instance.Tools;
+          // var Annotations = instance.Annotations;
+        
+          docViewer.on('documentLoaded', function() {
+            // call methods relating to the loaded document
+          });
+        });
+        </script>
 </body>
 
 </html>
